@@ -1,0 +1,68 @@
+﻿<Window x:Class="CalculatorWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CalculatorWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TextBlock x:Name="Calculator" HorizontalAlignment="Left" VerticalAlignment="Top" TextAlignment="Center" Height="62" Width="175" FontSize="36" TextWrapping="Wrap" FontWeight="Bold" Margin="10,0,0,0"><Run Language="en-sg" Text="Calculator"/></TextBlock>
+        <Button x:Name="Button1" HorizontalAlignment="Left" Margin="18,60,0,0" VerticalAlignment="Top" Width="52" Height="78" Background="#FFEFE7E7" RenderTransformOrigin="0.519,0.533" Click="MathButton">
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="36" RenderTransformOrigin="-4.431,3.374"/>
+        </Button>
+        <Button x:Name="Button2" HorizontalAlignment="Left" Margin="105,60,0,0" VerticalAlignment="Top" Width="52" Height="78" Background="#FFEFE7E7" RenderTransformOrigin="0.519,0.533" Click="MathButton">
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="2" VerticalAlignment="Center" FontSize="36" RenderTransformOrigin="-4.431,3.374"/>
+        </Button>
+        <Button x:Name="Button3" HorizontalAlignment="Left" Margin="201,63,0,0" VerticalAlignment="Top" Width="52" Height="78" Background="#FFEFE7E7" RenderTransformOrigin="0.519,0.533" Click="MathButton">
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="3" VerticalAlignment="Center" FontSize="36" RenderTransformOrigin="-4.431,3.374"/>
+        </Button>
+        <Button x:Name="Button4" HorizontalAlignment="Left" Margin="18,161,0,0" VerticalAlignment="Top" Width="52" Height="78" Background="#FFEFE7E7" RenderTransformOrigin="0.519,0.533" Click="MathButton">
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="4" VerticalAlignment="Center" FontSize="36" RenderTransformOrigin="-4.431,3.374"/>
+        </Button>
+        <Button x:Name="Button5" HorizontalAlignment="Left" Margin="105,161,0,0" VerticalAlignment="Top" Width="52" Height="78" Background="#FFEFE7E7" RenderTransformOrigin="0.519,0.533" Click="MathButton">
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="5" VerticalAlignment="Center" FontSize="36" RenderTransformOrigin="-4.431,3.374"/>
+        </Button>
+        <Button x:Name="Button6" HorizontalAlignment="Left" Margin="201,163,0,0" VerticalAlignment="Top" Width="52" Height="78" Background="#FFEFE7E7" RenderTransformOrigin="0.519,0.533" Click="MathButton">
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="6" VerticalAlignment="Center" FontSize="36" RenderTransformOrigin="-4.431,3.374"/>
+        </Button>
+        <Button x:Name="Button7" HorizontalAlignment="Left" Margin="20,264,0,0" VerticalAlignment="Top" Width="52" Height="78" Background="#FFEFE7E7" RenderTransformOrigin="0.519,0.533" Click="MathButton">
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="7" VerticalAlignment="Center" FontSize="36" RenderTransformOrigin="-4.431,3.374"/>
+        </Button>
+        <Button x:Name="Button8" HorizontalAlignment="Left" Margin="107,264,0,0" VerticalAlignment="Top" Width="52" Height="78" Background="#FFEFE7E7" RenderTransformOrigin="0.519,0.533" Click="MathButton">
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="8" VerticalAlignment="Center" FontSize="36" RenderTransformOrigin="-4.431,3.374"/>
+        </Button>
+        <Button x:Name="Button9" HorizontalAlignment="Left" Margin="200,264,0,0" VerticalAlignment="Top" Width="52" Height="78" Background="#FFEFE7E7" RenderTransformOrigin="0.519,0.533" Click="MathButton">
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="9" VerticalAlignment="Center" FontSize="36" RenderTransformOrigin="-4.431,3.374"/>
+        </Button>
+        <Button x:Name="Button0" HorizontalAlignment="Left" Margin="107,356,0,0" VerticalAlignment="Top" Width="52" Height="78" Background="#FFEFE7E7" RenderTransformOrigin="0.519,0.533" FontSize="20" Click="MathButton">
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="0" VerticalAlignment="Center" FontSize="36" RenderTransformOrigin="-4.431,3.374"/>
+        </Button>
+        <TextBox x:Name="ResultBox" HorizontalAlignment="Left" Margin="312,63,0,0" TextWrapping="Wrap" Text="Welcome!" VerticalAlignment="Top" Width="318" Height="70"/>
+        <Button x:Name="ButtonEquals" HorizontalAlignment="Left" Margin="201,356,0,0" VerticalAlignment="Top" Width="52" Height="78" Background="#FFEFE7E7" RenderTransformOrigin="0.519,0.533" FontSize="20" Click="GetResult">
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="=" VerticalAlignment="Center" FontSize="36" RenderTransformOrigin="-4.431,3.374"/>
+        </Button>
+        <Button x:Name="ButtonDot" HorizontalAlignment="Left" Margin="20,356,0,0" VerticalAlignment="Top" Width="52" Height="78" Background="#FFEFE7E7" RenderTransformOrigin="0.519,0.533" FontSize="20" Click="MathButton">
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="." VerticalAlignment="Center" FontSize="36" RenderTransformOrigin="-4.431,3.374"/>
+        </Button>
+        <Button x:Name="ButtonEquals_Copy" HorizontalAlignment="Left" Margin="295,356,0,0" VerticalAlignment="Top" Width="52" Height="78" Background="#FFEFE7E7" RenderTransformOrigin="0.519,0.533" FontSize="20" Click="ClearResult">
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Clr" VerticalAlignment="Center" FontSize="36" RenderTransformOrigin="-4.431,3.374"/>
+        </Button>
+        <Button x:Name="Button6_Copy" HorizontalAlignment="Left" Margin="386,161,0,0" VerticalAlignment="Top" Width="52" Height="78" Background="#FFEFE7E7" RenderTransformOrigin="0.519,0.533" Click="MathButton">
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="-" VerticalAlignment="Top" FontSize="36" RenderTransformOrigin="-4.431,3.374"/>
+        </Button>
+        <Button x:Name="Button6_Copy1" HorizontalAlignment="Left" Margin="295,264,0,0" VerticalAlignment="Top" Width="52" Height="78" Background="#FFEFE7E7" RenderTransformOrigin="0.519,0.533" Click="MathButton">
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="/" VerticalAlignment="Center" FontSize="36" RenderTransformOrigin="-4.431,3.374"/>
+        </Button>
+        <Button x:Name="Button6_Copy2" HorizontalAlignment="Left" Margin="295,161,0,0" VerticalAlignment="Top" Width="52" Height="78" Background="#FFEFE7E7" RenderTransformOrigin="0.519,0.533" Click="MathButton">
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="+" VerticalAlignment="Center" FontSize="36" RenderTransformOrigin="-4.431,3.374"/>
+        </Button>
+        <Button x:Name="Button6_Copy3" HorizontalAlignment="Left" Margin="386,264,0,0" VerticalAlignment="Top" Width="52" Height="78" Background="#FFEFE7E7" RenderTransformOrigin="0.519,0.533" Click="MathButton">
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="*" VerticalAlignment="Center" FontSize="36" RenderTransformOrigin="-4.431,3.374"/>
+        </Button>
+        <Button x:Name="Button6_Copy4" HorizontalAlignment="Left" Margin="386,356,0,0" VerticalAlignment="Top" Width="52" Height="78" Background="#FFEFE7E7" RenderTransformOrigin="0.519,0.533" Click="MathButton">
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="%" VerticalAlignment="Center" FontSize="36" RenderTransformOrigin="-4.431,3.374"/>
+        </Button>
+
+    </Grid>
+</Window>
