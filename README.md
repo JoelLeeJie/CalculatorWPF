@@ -1,2 +1,2 @@
 # CalculatorWPF
-An Actual Calculator
+A calculator. Does not follow order of operations(x/+-) but goes from left to right.
